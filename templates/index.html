@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>Django Blog</title>
+    <body>
+    <h1>This is Blog Project</h1>
+        <div class="blog card">
+
+            <h3>The Author of this Blog is {{allauthors.firstname}} {{allauthors.lastname}}</h3>
+            <p>Description: <br> {{allauthors.description}}</p>
+            <p>Author pubslished this blog post on {{allauthors.date}} </p>
+            <p>Author contact number is {{allauthors.phone}}</p>
+        </div>
+        
+        <div class="loop">
+            <ul>
+                {% for x in mymembers %}
+                    <li><a href="#">{{ x.firstname }} {{ x.lastname }}</a></li>
+                {% endfor %}
+              </ul>
+        </div>
+    </body>
+</html>
